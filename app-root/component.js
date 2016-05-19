@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import { changeText } from './actions';
 import React from 'react';
+import styles from './component.css';
 
 export const AppComponent = props => {
   const placeHolderText = 'Enter some text';
   return (
-    <div>
+    <div className={styles.root}>
       <input type="text" name="textbox" onChange={props.sendText} placeholder={placeHolderText} />
       <button onClick={props.onClick}>clear the text</button>
       <p>{props.textContent}</p>
@@ -16,6 +17,7 @@ export const AppComponent = props => {
 function mapStateToProps(state, props) {
   return {
     textContent: state.text
+
   };
 }
 

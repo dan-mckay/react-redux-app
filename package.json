@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "watchify --verbose --debug --transform babelify -o app.js index.js & static -c 0 .",
-    "bundle": "browserify --verbose --debug --transform babelify -o app.js index.js",
+    "start": "watchify -p [ css-modulesify -o app.css ] --verbose --debug --transform babelify -o app.js index.js & static -c 0 .",
+    "bundle": "browserify -p [ css-modulesify -o app.css ] --verbose --debug --transform babelify -o app.js index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,6 +19,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "css-modulesify": "^0.23.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-redux": "^4.4.5",
