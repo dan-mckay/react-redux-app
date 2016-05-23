@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { changeText } from './actions';
 import Footer from '../footer/footer'
 import Header from '../header/header'
+import List from '../navigation/list';
 import React from 'react';
 import styles from './component.css';
 
@@ -13,6 +14,7 @@ export const AppComponent = props => {
       <input type="text" name="textbox" onChange={props.sendText} placeholder={placeHolderText} />
       <button onClick={props.onClick}>clear the text</button>
       <p>{props.textContent}</p>
+      <List />
       <Footer />
     </div>
   );
@@ -20,8 +22,7 @@ export const AppComponent = props => {
 
 function mapStateToProps(state, props) {
   return {
-    textContent: state.text
-
+    textContent: state.root.text
   };
 }
 

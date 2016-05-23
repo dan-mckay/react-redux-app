@@ -1,11 +1,36 @@
 ._app_root_component__root {
   background-color: #bada55;
 }
-._header_header__header {
-  background-color: #292929;
-  color: #fff;
+._navigation_list__listItem {
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid gray;
+}
+
+._navigation_list__listItem-enter {
+  opacity: 0.01;
+}
+
+._navigation_list__listItem-enter._navigation_list__listItem-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+._navigation_list__listItem-leave {
+  opacity: 1;
+}
+
+._navigation_list__listItem-leave._navigation_list__listItem-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
 ._footer_footer__footer {
   background-color: #292929;
   color: #fff;
+  height: 50px;
+}
+._header_header__header {
+  background-color: #292929;
+  color: #fff;
+  height: 50px;
 }

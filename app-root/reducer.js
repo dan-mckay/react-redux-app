@@ -1,6 +1,11 @@
 import { CHANGE_TEXT } from './actions';
 
-export default function rootReducer(state = {}, action) {
+const DEFAULT_STATE = {
+  text: 'Hello World'
+}
+
+export default function rootReducer(state = DEFAULT_STATE, action) {
+  console.log('£££', action)
   let nextState = state;
   switch (action.type) {
     case CHANGE_TEXT:

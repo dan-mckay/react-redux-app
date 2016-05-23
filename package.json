@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "watchify -p [ css-modulesify -o app.css ] --verbose --debug --transform babelify -o app.js index.js & static -c 0 .",
+    "start": "watchify -p [ css-modulesify -o app.css ] --verbose --debug --transform babelify -o app.js index.js & static -p 8081 -c 0 .",
     "bundle": "browserify -p [ css-modulesify -o app.css ] --verbose --debug --transform babelify -o app.js index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,9 @@
   "dependencies": {
     "css-modulesify": "^0.23.0",
     "react": "^15.0.2",
+    "react-addons-css-transition-group": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-motion": "^0.4.3",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
